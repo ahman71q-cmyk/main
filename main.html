@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>مرحباً بكم </h1>
+            <p class="subtitle">  الصفحه الرئيسية</p>
+        </header>
+        
+        <div class="links-container">
+            <div class="link-card">
+                <div class="icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h2 class="link-title">  4G coverage Dimensioning </h2>
+                
+                <a href="https://ahman71q-cmyk.github.io/caverage-planning-toll/" class="btn pulse"> اضغط هنا </a>
+            </div>
+            
+            <div class="link-card">
+                <div class="icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h2 class="link-title">4G capacity Dimensioning <h2>
+              
+                  <a href="https://saidbazoo.github.io/4G/" class="btn pulse">اضغط هنا</a>
+
+            </div>
+        </div>
+        <div class="links-container">
+            <div class="link-card">
+                <div class="icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h2 class="link-title">  5G coverage Dimensioning </h2>
+                
+                <a href="" class="btn pulse"> اضغط هنا </a>
+            </div>
+            
+            <div class="link-card">
+                <div class="icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h2 class="link-title">5G capacity Dimensioning <h2>
+              
+                  <a href=" " class="btn pulse">اضغط هنا</a>
+
+            </div>
+        </div>
+        
+        <footer>
+            <p>جميع الحقوق محفوظة &copy; 2026 | تم إنشاء هذا الموقع بواسطة tiger & A7K</p>
+        </footer>
+    </div>
+
+    <script>
+        // إضافة تفاعل إضافي للأزرار
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // يمكنك هنا تغيير الرابط الفعلي
+                const pageNumber = this.textContent.includes("الأولى") ? "الأولى" : "الثانية";
+                alert(`ستتم إعادة توجيهك إلى الصفحة ${pageNumber} (في التطبيق الفعلي، سيتم إعادة التوجيه إلى الرابط الحقيقي)`);
+                
+                // في التطبيق الحقيقي، يمكنك إلغاء التعليق عن السطر التالي وتعديل الرابط
+                // window.location.href = "page1.html"; أو "page2.html"
+            });
+        });
+        
+        // إضافة تأثير عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.link-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
